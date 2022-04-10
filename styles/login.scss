@@ -1,0 +1,146 @@
+$primary-color: rgb(67, 67, 207);
+$secundary-color: #1877f2;
+$white: rgb(241, 239, 239);
+$transtion :  0.5s ease all;
+$danger : #f71b26;
+
+@mixin flex($justify: center) {
+    display: flex;
+    justify-content: $justify;
+}
+
+.container {
+    background: $primary-color;
+    height: 100vh;
+    width: 100vw;
+    @include flex(center);
+    align-items: center;
+
+    div {
+        width: 30%;
+        height: 100%;
+        background-color: $white;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            margin: 30px;
+            letter-spacing: 1px;
+            font-size: 32px;
+            color: $white;
+            background-color: $secundary-color;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 10px;
+        }
+
+        .signIn {
+            height: 50%;
+            width: 80%;
+            margin: 30px;
+            @include flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            color: rgb(97, 95, 95);
+            font-weight: 600;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            form {
+                display: flex;
+
+                flex-direction: column;
+                width: 100%;
+
+                div {
+                    @include flex(flex-start);
+                    width: 100%;
+                    margin-top: 20px;
+                    height: 110px;
+
+                    label {
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+
+                    .input-login,
+                    .input-password {
+                        height: 50px;
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid wheat;
+                        border-radius: 10px;
+                        box-shadow: 1px 1px 1px 1px rgba(87, 86, 86, 0.3);
+                        outline: none;
+                        margin-top: 10px;
+
+                        &:focus {
+                            border: 1px solid $primary-color;
+                            transition: $transtion;
+                        }
+                    }
+
+                    .error-login,
+                    .error-password {
+                        margin: 10px 5px 5px 5px;
+                        color: $danger;
+                        font-size: 12px;
+                        font-weight: 300;
+                        transition: $transtion;
+                    }
+                }
+
+                .button-submit {
+                    background-color: $secundary-color;
+                    height: 35px;
+                    margin-top: 20px;
+                    border: none;
+                    outline: none;
+                    color: $white;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    &:active, &:focus {
+                        background-color: $primary-color;
+                        transition: $transtion;
+                    }
+                }
+            }
+
+            .to-signUp {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                margin-top: 30px;
+                letter-spacing: 2px;
+                justify-content: center;
+                height: 50px;
+                color: #aaaeb3;
+
+                a {
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    margin-right: 1px;
+                }
+            }
+        }
+    }
+
+    .image {
+        width: 70%;
+        height: 100%;
+        background-color: #88a0c2;
+        background-image: url("../public/cat_login.jpg");
+        background-size: contain;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
