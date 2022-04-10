@@ -1,4 +1,7 @@
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import UserContext from '../auth';
+import Swal from 'sweetalert2';
 
 export default function Login() {
 
@@ -8,8 +11,19 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
+  const { Login } = useContext(UserContext);
 
-  const onSubmit = (data) => console.log(data)
+
+
+  const onSubmit = ({ email, password }) => {
+    const response = Login(email, password);
+    if (response) return window.location.href = '/teste'
+    Swal.fire({
+      icon: 'error',
+      title: 'Ops!',
+      text: 'Seus dados estão incorretos'
+    })
+  }
 
   return (
     <section className='container'>
