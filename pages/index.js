@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form';
 import UserContext from '../auth';
 import Swal from 'sweetalert2';
@@ -11,11 +12,14 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+
   const { Login } = useContext(UserContext);
 
-  const onSubmit = ({ email, password }) => {
-    const response = Login(email, password);
-    if (response) return window.location.href = '/teste'
+  const onSubmit = async ({ login, password }) => {
+    const response = await Login(login, password);
+    if (response) return router.push('/home')
+
     Swal.fire({
       icon: 'error',
       title: 'Ops!',
@@ -32,12 +36,12 @@ export default function Login() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label htmlFor='input-username'>Username</label>
-              <input id='input-username' className='input-login' {...register('email', { required: true })} placeholder='Email or name' maxLength='40'></input>
-              {errors.email && <span className='error-login'>This field is required</span>}
+              <input id='input-username' autoComplete='username' className='input-login' {...register('login', { required: true })} placeholder='Email or name' maxLength='40'></input>
+              {errors.login && <span className='error-login'>This field is required</span>}
             </div>
             <div>
               <label htmlFor='input-password'>Password</label>
-              <input id='input-password' className='input-password' {...register('password', { required: true })} placeholder='Password' type='password'></input>
+              <input id='input-password' autoComplete='current-password' className='input-password' {...register('password', { required: true })} placeholder='Password' type='password'></input>
               {errors.password && <span className='error-password'>This field is required</span>}
             </div>
             <button className='button-submit' type='submit'>Sign in</button>
