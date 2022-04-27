@@ -1,0 +1,184 @@
+.container {
+  background: #4343cf;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container div {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container div h1 {
+  margin: 30px;
+  letter-spacing: 1px;
+  font-size: 32px;
+  color: white;
+  background-color: #1877f2;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10px;
+}
+
+.container div .signIn {
+  height: 50%;
+  width: 80%;
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #615f5f;
+  font-weight: 600;
+}
+
+.container div .signIn h3 {
+  font-size: 24px;
+}
+
+.container div .signIn form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.container div .signIn form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-top: 20px;
+  height: 110px;
+}
+
+.container div .signIn form div label {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.container div .signIn form div .input-login,
+.container div .signIn form div .input-password {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(87, 86, 86, 0.3);
+          box-shadow: 1px 1px 1px 1px rgba(87, 86, 86, 0.3);
+  outline: none;
+  margin-top: 10px;
+}
+
+.container div .signIn form div .input-login:focus,
+.container div .signIn form div .input-password:focus {
+  border: 1px solid #4343cf;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.container div .signIn form div .error-login,
+.container div .signIn form div .error-password {
+  margin: 10px 5px 5px 5px;
+  color: #f71b26;
+  font-size: 12px;
+  font-weight: 300;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.container div .signIn form .button-submit {
+  background-color: #1877f2;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container div .signIn form .button-submit:active, .container div .signIn form .button-submit:focus {
+  background-color: #4343cf;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.container div .signIn .to-signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 50px;
+  color: #aaaeb3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container div .signIn .to-signUp a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.container .image {
+  width: 70%;
+  height: 100%;
+  background-color: #88a0c2;
+  background-image: url("../public/cat_login.jpg");
+  background-size: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*# sourceMappingURL=login.css.map */
