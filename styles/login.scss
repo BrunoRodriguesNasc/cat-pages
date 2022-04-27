@@ -1,6 +1,6 @@
 $primary-color: rgb(67, 67, 207);
 $secundary-color: #1877f2;
-$white: rgb(241, 239, 239);
+$white: rgb(255, 255, 255);
 $transtion :  0.5s ease all;
 $danger : #f71b26;
 
@@ -119,15 +119,15 @@ $danger : #f71b26;
                 width: 100%;
                 flex-direction: row;
                 margin-top: 30px;
-                letter-spacing: 2px;
-                justify-content: center;
+                justify-content: flex-start;
                 height: 50px;
                 color: #aaaeb3;
+                align-items: center;
 
                 a {
-                    letter-spacing: 2px;
                     text-decoration: none;
-                    margin-right: 1px;
+
+                    margin-left: 5px;
                 }
             }
         }

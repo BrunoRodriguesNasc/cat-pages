@@ -13,8 +13,6 @@ export default function Login() {
 
   const { Login } = useContext(UserContext);
 
-
-
   const onSubmit = ({ email, password }) => {
     const response = Login(email, password);
     if (response) return window.location.href = '/teste'

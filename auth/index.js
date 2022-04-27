@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-
 const DEFAULT_VALUE = {
     state: {
         login: '',
@@ -15,8 +14,10 @@ export const UserProvider = ({ children }) => {
 
     const [user, setUser] = useState({});
 
-    function Login(email, senha) {
-        console.log('teste');
+    const Login = async (email, senha) => {
+       
+        const {error, data } = await getUser({email, senha});
+
         if (email === 'bruno' && senha === '123') {
             setUser({ id: 1, name: 'bruno', email: 'bruno@teste.com' });
             localStorage.setItem('@App:user', JSON.stringify('bruno'));
@@ -26,15 +27,15 @@ export const UserProvider = ({ children }) => {
         }
 
 
-        return false
+        return false;
     }
 
-    function Logout() {
+    const Logout = () => {
         setUser(null);
-
         sessionStorage.removeItem('@App:user');
         sessionStorage.removeItem('App:token');
     }
+
     useEffect(() => {
         const storagedUser = localStorage.getItem('@App:user');
         const storagedId = localStorage.getItem('@App:id');

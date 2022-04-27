@@ -16,7 +16,7 @@
 .container div {
   width: 30%;
   height: 100%;
-  background-color: #f1efef;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +36,7 @@
   margin: 30px;
   letter-spacing: 1px;
   font-size: 32px;
-  color: #f1efef;
+  color: white;
   background-color: #1877f2;
   padding: 10px;
   border-radius: 10px;
@@ -133,7 +133,7 @@
   margin-top: 20px;
   border: none;
   outline: none;
-  color: #f1efef;
+  color: white;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
@@ -155,18 +155,19 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 30px;
-  letter-spacing: 2px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 50px;
   color: #aaaeb3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container div .signIn .to-signUp a {
-  letter-spacing: 2px;
   text-decoration: none;
-  margin-right: 1px;
+  margin-left: 5px;
 }
 
 .container .image {
