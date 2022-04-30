@@ -1,25 +1,21 @@
 import React from 'react'
-import { Box, Flex } from 'rebass'
-import HomePageHeader from '../components/home/HomePageHeader'
+import HomePageFooter from '../components/home/HomePageFooter'
+import PageLayout from '../components/layout/PageLayout'
 import HomePageLeft from '../components/home/HomePageLeft'
 import HomePageMain from '../components/home/HomePageMain'
 import HomePageMainContent from '../components/home/HomePageMainContent'
 import HomePageRight from '../components/home/HomePageRight'
+
 const home = () => {
     return (
-        <Flex
-            sx={{
-                flexDirection: 'column',
-                minHeight: '100vh'
-            }}>
-            <HomePageHeader />
+        <PageLayout>
             <HomePageMain>
                 <HomePageMainContent />
                 <HomePageRight />
                 <HomePageLeft />
             </HomePageMain>
-            <Box>Footer</Box>
-        </Flex>
+            <HomePageFooter />
+        </PageLayout>
     )
 }
 
