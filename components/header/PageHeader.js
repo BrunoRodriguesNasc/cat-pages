@@ -1,29 +1,44 @@
 import React from 'react'
 import Link from 'next/link'
-import { AiOutlineUser, AiOutlineHome } from 'react-icons/ai';
-import { Flex } from 'rebass';
+import { AiOutlineUser, AiOutlineHome, AiFillGithub } from 'react-icons/ai';
+import { Flex, Box } from 'rebass';
 
 const PageHeader = () => {
 
     const actions = [
         {
-            icon: <AiOutlineUser style={{ height: 50, width: 30, cursor: 'pointer', color: 'white' }} />,
+            icon: <AiOutlineHome style={{ height: 50, width: 25, cursor: 'pointer', color: 'white' }} />,
+            to: '/home'
+        },
+        {
+            icon: <AiOutlineUser style={{ height: 50, width: 25, cursor: 'pointer', color: 'white' }} />,
             to: '/perfil'
         },
         {
-            icon: <AiOutlineHome style={{ height: 50, width: 30, cursor: 'pointer', color: 'white' }} />,
-            to: '/home'
-        }
+            icon: <AiFillGithub style={{ height: 50, width: 25, cursor: 'pointer', color: 'white' }} />,
+            to: '/github'
+        },
+
     ]
 
     return (
-        <Flex sx={{
-            height: 50,
-            bg: 'secondary',
-            
-        }}>
-            <h1>Catbook</h1>
-            {actions.map(({ icon, to }) => <Link key={to} href={to}>{icon}</Link>)}
+        <Flex
+            p={1}
+            sx={{
+                height: 50,
+                bg: '#1877f2',
+                justifyContent: 'space-between',
+
+            }}>
+            <Box color={'white'} fontSize={28} fontWeight={'bold'} p={1}>Catbook</Box>
+            <Box width={[200, 200, 200]}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'space-evenly'
+                }}
+            >
+                {actions.map(({ icon, to }) => <Link key={to} href={to}>{icon}</Link>)}
+            </Box>
 
         </Flex>
     )
