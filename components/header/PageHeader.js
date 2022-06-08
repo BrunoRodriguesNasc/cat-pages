@@ -26,7 +26,7 @@ const PageHeader = () => {
             p={1}
             sx={{
                 height: 50,
-                bg: '#1877f2',
+                bg: 'rgb(117, 21, 136)',
                 justifyContent: 'space-between',
 
             }}>

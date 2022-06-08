@@ -1,0 +1,65 @@
+.catNameAndPhoto {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.catNameAndPhoto .catPhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 25%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/28/10/05/kitten-1285341_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catNameAndPhoto .catName {
+  margin-left: 0.9rem;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.novos-conteudos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.novos-conteudos label {
+  position: relative;
+  left: 10%;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.novos-conteudos .input-conteudo {
+  width: 80%;
+  height: 50px;
+  border: 1px solid #696363;
+  border-radius: 10px;
+  -webkit-box-shadow: 1.2px 2px 1px 0.1px #8d8989;
+          box-shadow: 1.2px 2px 1px 0.1px #8d8989;
+  position: relative;
+  left: 10%;
+  padding: 10px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,5 +1,5 @@
 .container {
-  background: #4343cf;
+  background: #751588;
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -37,7 +37,7 @@
   letter-spacing: 1px;
   font-size: 32px;
   color: white;
-  background-color: #1877f2;
+  background-color: #531024;
   padding: 10px;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -112,7 +112,7 @@
 
 .container div .signIn form div .input-login:focus,
 .container div .signIn form div .input-password:focus {
-  border: 1px solid #4343cf;
+  border: 1px solid #751588;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
@@ -128,7 +128,7 @@
 }
 
 .container div .signIn form .button-submit {
-  background-color: #1877f2;
+  background-color: #531024;
   height: 35px;
   margin-top: 20px;
   border: none;
@@ -140,7 +140,7 @@
 }
 
 .container div .signIn form .button-submit:active, .container div .signIn form .button-submit:focus {
-  background-color: #4343cf;
+  background-color: #751588;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }

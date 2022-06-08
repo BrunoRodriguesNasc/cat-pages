@@ -1,16 +1,17 @@
 import React from 'react'
-import { Box } from 'rebass'
+import { Flex } from 'rebass'
 
 const HomePageMainContent = () => {
     return (
-        <Box
+        <Flex
             bg="white"
-            sx={{
-                flex: 1,
-                minWidth: 0
-            }}>
-            Main Content
-        </Box>
+            flexDirection={'column'}
+            sx={{flex: 1,minWidth: 0}}>
+          <section className='novos-conteudos'>
+              <label htmlFor='input-conteudo'>Adicione uma foto ou um pensamento do seu gatinho!</label>
+              <input id='input-conteudo' placeholder='Digite algo...' className='input-conteudo'></input>
+          </section>
+        </Flex>
     )
 }
 

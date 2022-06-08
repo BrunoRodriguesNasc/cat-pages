@@ -25,6 +25,7 @@ export const UserProvider = ({ children }) => {
             localStorage.setItem('@App:user', JSON.stringify(userDb.name));
             localStorage.setItem('@App:id', JSON.stringify(userDb._id));
             localStorage.setItem('@App:login', userDb.login)
+            localStorage.setItem('@App:catName', userDb.catName)
             localStorage.setItem('@App:token', data.data.token)
             return true;
         }
@@ -41,10 +42,10 @@ export const UserProvider = ({ children }) => {
         const storagedUser = localStorage.getItem('@App:user');
         const storagedId = localStorage.getItem('@App:id');
         const storagedEmail = localStorage.getItem('@App:login');
-
+        const storageNameCat = localStorage.getItem('@App:catName')
 
         if (storagedUser) {
-            setUser({ id: JSON.parse(storagedId), name: JSON.parse(storagedUser), login: storagedEmail });
+            setUser({ id: JSON.parse(storagedId), name: JSON.parse(storagedUser), login: storagedEmail, catName:storageNameCat });
         }
     }, []);
 
