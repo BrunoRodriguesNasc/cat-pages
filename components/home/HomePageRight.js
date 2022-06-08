@@ -7,7 +7,7 @@ const HomePageRight = () => {
             sx={{
                 flexBasis: [
                     'auto',
-                    64
+                    300
                 ],
                 order: -1
             }}>

@@ -36,15 +36,15 @@ export default function Login() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label htmlFor='input-username'>Username</label>
-              <input id='input-username' autoComplete='username' className='input-login' {...register('login', { required: true })} placeholder='Email or name' maxLength='40'></input>
+              <input id='input-username' data-cy="username" autoComplete='username' className='input-login' {...register('login', { required: true })} placeholder='Email or name' maxLength='40'></input>
               {errors.login && <span className='error-login'>This field is required</span>}
             </div>
             <div>
               <label htmlFor='input-password'>Password</label>
-              <input id='input-password' autoComplete='current-password' className='input-password' {...register('password', { required: true })} placeholder='Password' type='password'></input>
+              <input id='input-password' data-cy="password" autoComplete='current-password' className='input-password' {...register('password', { required: true })} placeholder='Password' type='password'></input>
               {errors.password && <span className='error-password'>This field is required</span>}
             </div>
-            <button className='button-submit' type='submit'>Sign in</button>
+            <button className='button-submit' data-cy="button-submit" type='submit'>Sign in</button>
           </form>
           <div className='to-signUp'>Don&lsquo;t have an account yet? <a href='#'>Join to Catbook</a></div>
         </div>

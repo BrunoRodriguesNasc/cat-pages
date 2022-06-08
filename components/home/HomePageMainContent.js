@@ -4,6 +4,7 @@ import { Box } from 'rebass'
 const HomePageMainContent = () => {
     return (
         <Box
+            bg="white"
             sx={{
                 flex: 1,
                 minWidth: 0

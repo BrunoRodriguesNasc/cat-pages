@@ -7,7 +7,7 @@ const HomePageLeft = () => {
             sx={{
                 flexBasis: [
                     'auto',
-                    64
+                    300
                 ]
             }}>
             Ads
